@@ -1,1 +1,0 @@
-zm-cli sfdsdfsd
