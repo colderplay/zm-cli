@@ -1,1 +1,1 @@
-zm-cli
+zm-cli sfdsdfsd
