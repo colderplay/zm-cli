@@ -1,0 +1,60 @@
+{
+  "name": "shabi",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
+    "build:master": "vue-tsc --noEmit && vite build --mode development",
+    "build:release": "vue-tsc --noEmit && vite build --mode production",
+    "build:tester": "vue-tsc --noEmit && vite build --mode tester",
+    "build:uat": "vue-tsc --noEmit && vite build --mode uat",
+    "fat": "vite build --mode tester",
+    "uat": "vite build --mode uat",
+    "pro": "vite build --mode production",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "date-fns": "^2.28.0",
+    "element-plus": "^1.2.0-beta.6",
+    "eslint": "^8.5.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.0-rc.10",
+    "vue": "^3.2.25",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "@types/nprogress": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "dart-sass": "^1.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "mrm": "^3.0.10",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.0",
+    "typescript": "^4.4.4",
+    "unplugin-auto-import": "^0.5.3",
+    "unplugin-vue-components": "^0.17.9",
+    "vite": "^2.7.2",
+    "vite-plugin-style-import": "^1.4.0",
+    "vue-tsc": "^0.29.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "yarn lint",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
